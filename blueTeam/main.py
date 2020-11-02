@@ -1,7 +1,11 @@
 from time import sleep
-import socket,sys
+import socket,sys,os
 from cryptography.fernet import Fernet
-from classes.encrypt import *
+from classess.encrypt import *
+from classess.decrypt import *
+from classess.remove_files import *
+
+
 keyLocation = "./key.key"
 # display interface
 def interface(keys):
@@ -19,9 +23,13 @@ def interface(keys):
         userFolder=input("What folder do you want to input ")
         userFolder=f"./{userFolder}"
         encrptFolder(userFolder, keys)
-    # elif(userInput == "2"):
-    #     ## Decryption method
-    # elif(userInput == "3"):-
+        remove_file(keyLocation,userFolder)
+    elif(userInput == "2"):
+        ## Decryption method
+        userFolder=input("What folder do you want to input ")
+        userFolder=f"./{userFolder}"
+        decryptFolder(userFolder, keys)
+    # elif(userInput == "3"):
     #     ## Open the port
     # elif(userInput == "4"):
     #     ## close the port
