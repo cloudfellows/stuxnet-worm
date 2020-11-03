@@ -6,7 +6,7 @@ from time import sleep
 #===== Variables ======#
 now = datetime.now()
 # dd/mm/YY H:M:S
-dt_string = now.strftime("%d%m%y")
+dt_string = now.strftime("%m%d%y")
 
 ## Compressing the files to a zip file with password
 def compressFile(folder_name):
@@ -14,7 +14,7 @@ def compressFile(folder_name):
     zipPW = getpass("Enter password ")
     to_zip = list()
 
-    with pyzipper.AESZipFile(zip_file_location, 'w', compression=pyzipper.ZIP_LZMA) as zf:
+    with pyzipper.AESZipFile(os.path.abspath(zip_file_location), 'w', compression=pyzipper.ZIP_LZMA) as zf:
         zf.setpassword(bytes(zipPW, "utf-8"))
         zf.setencryption(pyzipper.WZ_AES, nbits=128)
         for root,dirs,files in os.walk(folder_name):
