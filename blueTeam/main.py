@@ -7,6 +7,7 @@ from classess.decrypt import *
 from classess.remove_files import *
 from classess.blockIt import *
 from classess.zipper import *
+from classess.openIt import *
 
 #======= Variables ========#
 keyLocation = "./key.key"
@@ -42,9 +43,11 @@ def interface(keys):
         userFolder=f"./{userFolder}"
         decrypt_key = get_key(f"{userFolder}/key.key") 
         decryptFolder(userFolder, decrypt_key)
-    # elif(userInput == "4"):
-    #     ## open the port
-        # check_Port()
+    elif(userInput == "4"):
+        ## open the port
+        title = input("What is the title of the rule? ")
+        port_number = input("What port would you like to open? ")
+        add_rule_allow(title, int(port_number))
     elif(userInput == "5"):
         ## close the port
         title = input("What is the title of the rule? ")
