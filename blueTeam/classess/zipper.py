@@ -8,6 +8,7 @@ now = datetime.now()
 # dd/mm/YY H:M:S
 dt_string = now.strftime("%d%m%y")
 
+## Compressing the files to a zip file with password
 def compressFile(folder_name):
     zip_file_location = f"./{dt_string}.zip"
     zipPW = getpass("Enter password ")
@@ -21,6 +22,7 @@ def compressFile(folder_name):
                 zf.write(f"{root}/{filed}")
         zf.close()
     
+# Extracting zipfiles
 def extractFile(file_name):
     with pyzipper.AESZipFile(file_name) as zf:
         user_location = input("Where do you want to unzip? ")

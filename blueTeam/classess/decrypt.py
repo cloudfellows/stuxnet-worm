@@ -2,6 +2,7 @@ from cryptography.fernet import Fernet
 import time, os
 from .zipper import *
 
+# decrypting the folder
 def decryptFolder(dirNames, key):
     completeFileList = list()
     fer=Fernet(key)
@@ -11,7 +12,9 @@ def decryptFolder(dirNames, key):
         if not ("key.key") in fil:
             print(fil)
             decryptFile(fil, key)
-        
+
+
+# decrypting the file
 def decryptFile(file, key):
     f = Fernet(key)
     with open(file, "rb") as fileread:

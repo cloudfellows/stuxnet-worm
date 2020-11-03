@@ -1,3 +1,4 @@
+#======= Library ========#
 from time import sleep
 import socket,sys,os
 from cryptography.fernet import Fernet
@@ -6,8 +7,10 @@ from classess.decrypt import *
 from classess.remove_files import *
 from classess.zipper import *
 
-
+#======= Variables ========#
 keyLocation = "./key.key"
+
+#======= Function =========#
 # display interface
 def interface(keys):
     print("""
@@ -52,6 +55,7 @@ def interface(keys):
         sleep(1)
         exit()
 
+#====== Key functions =======#
 # getting the key
 def get_key(keyLocations):
     return open(keyLocations, "rb").read()
@@ -61,7 +65,7 @@ def generate_key():
     with open(keyLocation, "wb") as key_file:
         key_file.write(key)
 
-
+#======= main ========#
 def main():
     ## creating the key
     generate_key()
@@ -69,5 +73,6 @@ def main():
     key=get_key(keyLocation)
     while True:
         interface(key)
+        
 if __name__ == "__main__":
     main()
