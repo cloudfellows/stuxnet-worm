@@ -12,7 +12,7 @@ def encrptFolder(dirNames, key):
     key_file = open(f"{dirNames}/key.key", "w")
     key_file.write(str(key, "UTF-8"))
     key_file.close()
-    compressFile(dirNames)
+    compressFile(dirNames)  
 
 def encryptFile(file, key):
     
