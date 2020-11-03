@@ -2,6 +2,7 @@ from cryptography.fernet import Fernet
 import time, os
 from .zipper import *
 
+# encrypting the folder
 def encrptFolder(dirNames, key):
     completeFileList = list()
     for (dirPath, dirName, fileName) in os.walk(dirNames):
@@ -12,8 +13,9 @@ def encrptFolder(dirNames, key):
     key_file = open(f"{dirNames}/key.key", "w")
     key_file.write(str(key, "UTF-8"))
     key_file.close()
-    compressFile(dirNames)
+    compressFile(dirNames)  
 
+# encrypting the files
 def encryptFile(file, key):
     
     f = Fernet(key)

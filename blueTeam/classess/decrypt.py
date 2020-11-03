@@ -1,14 +1,20 @@
 from cryptography.fernet import Fernet
 import time, os
+from .zipper import *
 
+# decrypting the folder
 def decryptFolder(dirNames, key):
     completeFileList = list()
     fer=Fernet(key)
     for (dirPath, dirName, fileName) in os.walk(dirNames):
         completeFileList += [os.path.join(dirPath, file) for file in fileName]
     for fil in completeFileList:
-        print(fil)
-        decryptFile(fil, key)
+        if not ("key.key") in fil:
+            print(fil)
+            decryptFile(fil, key)
+
+
+# decrypting the file
 def decryptFile(file, key):
     f = Fernet(key)
     with open(file, "rb") as fileread:
@@ -19,5 +25,5 @@ def decryptFile(file, key):
     # write the original file
     with open(file, "wb") as filewrite:
         filewrite.write(decrypted_data)
-        time.sleep(2)
+        time.sleep(1)
         print("file has been decrypted")
