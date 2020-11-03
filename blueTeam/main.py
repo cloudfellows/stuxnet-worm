@@ -5,7 +5,9 @@ from cryptography.fernet import Fernet
 from classess.encrypt import *
 from classess.decrypt import *
 from classess.remove_files import *
+from classess.blockIt import *
 from classess.zipper import *
+from classess.openIt import *
 
 #======= Variables ========#
 keyLocation = "./key.key"
@@ -41,12 +43,15 @@ def interface(keys):
         userFolder=f"./{userFolder}"
         decrypt_key = get_key(f"{userFolder}/key.key") 
         decryptFolder(userFolder, decrypt_key)
-    # elif(userInput == "4"):
-    #     ## open the port
-        # check_Port()
-    # elif(userInput == "5"):
-    #     ## close the port
-        # check_Port()
+    elif(userInput == "4"):
+        ## open the port
+        port_number = input("What port would you like to open? ")
+        add_rule_allow(int(port_number))
+    elif(userInput == "5"):
+        ## close the port
+        port_number = input("What port would you like to block? ")
+        add_rule(int(port_number))
+
     else:
         ## exit
         if(os.path.isfile(keyLocation)):
@@ -76,3 +81,5 @@ def main():
         
 if __name__ == "__main__":
     main()
+
+#======== END ==========#
