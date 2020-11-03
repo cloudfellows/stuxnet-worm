@@ -33,7 +33,7 @@ This is repository is designed to mimic the `Stuxnet` incident around 2010. Scri
 ![Initial Whiteboard Before](./assets/wormDrawio-Before.jpg)
 Initial whiteboard before implementing security features.
  
-![Initial Whiteboard After](./assets/wormDrawio-After.jpg)
+![Initial Whiteboard After](./assets/wormDrawio-After.jpg)  
 Initial whiteboard after implementing security features.
 
 ---
