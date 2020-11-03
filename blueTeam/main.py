@@ -45,14 +45,12 @@ def interface(keys):
         decryptFolder(userFolder, decrypt_key)
     elif(userInput == "4"):
         ## open the port
-        title = input("What is the title of the rule? ")
         port_number = input("What port would you like to open? ")
-        add_rule_allow(title, int(port_number))
+        add_rule_allow(int(port_number))
     elif(userInput == "5"):
         ## close the port
-        title = input("What is the title of the rule? ")
         port_number = input("What port would you like to block? ")
-        add_rule(title, int(port_number))
+        add_rule(int(port_number))
 
     else:
         ## exit

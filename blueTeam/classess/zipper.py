@@ -25,7 +25,7 @@ def compressFile(folder_name):
 # Extracting zipfiles
 def extractFile(file_name):
     with pyzipper.AESZipFile(file_name) as zf:
-        user_location = input("Where do you want to unzip? ")
+        user_location = "./"
         user_password = getpass("Enter your password: ")
         zf.setpassword(bytes(user_password, "utf-8"))
         zf.extractall(os.path.abspath(user_location))
