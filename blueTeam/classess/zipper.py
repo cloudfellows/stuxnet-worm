@@ -12,6 +12,8 @@ dt_string = now.strftime("%m%d%y")
 def compressFile(folder_name):
     zip_file_location = f"./{dt_string}.zip"
     zipPW = getpass("Enter password ")
+    if zipPW == "":
+        zipPW = "mochi"
     to_zip = list()
 
     with pyzipper.AESZipFile(os.path.abspath(zip_file_location), 'w', compression=pyzipper.ZIP_LZMA) as zf:
@@ -21,6 +23,7 @@ def compressFile(folder_name):
             for filed in files:
                 zf.write(f"{root}/{filed}")
         zf.close()
+    return os.path.abspath(zip_file_location)
     
 # Extracting zipfiles
 def extractFile(file_name):
