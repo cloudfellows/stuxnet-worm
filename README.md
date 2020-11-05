@@ -1,4 +1,4 @@
-# STUXNET-Sandworm
+# STUXNET-Worm
 
 ---
 
