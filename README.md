@@ -29,15 +29,14 @@ This is repository is designed to mimic the `Stuxnet` incident around 2010. Scri
 ![Data Flow Diagram](./assets/dfd.png)  
 Depicts data flow between the trusted boundary network.
 
-
 ---
 
 ## Initial Whiteboard
 
-![Initial Whiteboard Before](./assets/wormDrawio-Before.jpg)  
+![Initial Whiteboard Before](./assets/Initial-WB-Before.jpg)  
 Initial whiteboard before implementing security features.
  
-![Initial Whiteboard After](./assets/wormDrawio-After.jpg)  
+![Initial Whiteboard After](./assets/Initial-WB-After.jpg)  
 Initial whiteboard after implementing security features.
 
 ---
