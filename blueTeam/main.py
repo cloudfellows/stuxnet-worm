@@ -16,7 +16,14 @@ keyLocation = "./key.key"
 # display interface
 def interface(keys):
     print("""
-    Logo goes here
+    ________      _____               ______     __________ 
+    ___  __/_________(_)_________________  /________(_)_  /_
+    __  /  __  ___/_  /__  ___/__  __ \_  /_  __ \_  /_  __/
+    _  /   _  /   _  / _(__  )__  /_/ /  / / /_/ /  / / /_  
+    /_/    /_/    /_/  /____/ _  .___//_/  \____//_/  \__/  
+                               /_/                           
+                            version 1.0
+
     1) Encrypt Folder & Zip
     2) UnZip file
     3) Decrypt Folder

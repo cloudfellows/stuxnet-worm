@@ -37,3 +37,7 @@ Initial whiteboard before implementing security features.
 Initial whiteboard after implementing security features.
 
 ---
+
+## Resource
+
+[Ubuntu16.04-Snort-Server](https://app.vagrantup.com/jinfluenza/boxes/Trisploit-snort-box/versions/1.0): Snort server hosted on Ubuntu machine
