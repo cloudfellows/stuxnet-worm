@@ -30,8 +30,8 @@ The source codes are purely for education purpose only.
 
 ## Tools Used
 
-[Python](https://www.python.org/): Main language that application is compiled from.  
-[Virtual Box](https://www.virtualbox.org/): Used to run the virtual state.  
+[Python](https://www.python.org/): Compiled language that was used to create applications.  
+[Virtual Box](https://www.virtualbox.org/): Used to run the virtual machine.  
 [Vagrant](https://app.vagrantup.com/): Used for deploying VM to the cloud storage.  
 [Microsoft Threat Modeling Tools](https://www.microsoft.com/en-us/download/details.aspx?id=49168): Used this tool to create a data flow diagram.  
 [Snort](https://www.snort.org/): Network intrusion detection system.  
