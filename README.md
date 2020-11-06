@@ -48,7 +48,7 @@ https://medium.com/@jayprakash.bilgaye/vagrant-step-by-step-tutorials-b0292412a1
 
 Once all of the boxes are pull down to your local machine set the endpoints network settings by going into `Virtual box` -> `File` -> `Preferences` -> `Network` -> Set your configuration as follow:
 
-![Vitual box network settings](./assets/Vbox-network.png)  
+<img src="./assets/Vbox-network.png" width="350px" alt="Vitual box network settings">   
 
 Then click on each boxes on Virtual box settings and configure and browse to network. Then configure its settings to:  
 
