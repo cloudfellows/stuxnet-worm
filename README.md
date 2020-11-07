@@ -12,7 +12,7 @@ Authors:
 
 ## Stuxnet Information
 
-Thisrepository is designed to mimic the `Stuxnet` incident around 2010. Script consists of variation of Stuxnet malware with mitigation using the blue team python script. Stuxnet malware is created from beginning to the fully functional executable file. 
+This repository is designed to mimic the `Stuxnet` incident around 2010. Script consists of variation of Stuxnet malware with mitigation using the blue team python script. Stuxnet malware is created from beginning to the fully functional executable file. 
 
 Stuxnet is a malicious computer worm that traversed through the network by means of a USB flash drive. It was first discovered in 2010, but some suspect that it has been developed and passed around. It was exploiting four zero-day flaws, targeting machines using the Windows operating system seeking out Siemens Step7 software. The report projected that worm infected over 200,000 computers and caused 1,000 machines to be damaged after the infection. The worm was responsible for causing substantial damage to the nuclear program of Iran.
 
